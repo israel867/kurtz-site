@@ -1,0 +1,7 @@
+{
+  "cleanUrls": true,
+  "redirects": [
+    { "source": "/service-area", "destination": "/", "permanent": true },
+    { "source": "/mobile-auto-detailing-in-college-station", "destination": "/college-station.html", "permanent": true }
+  ]
+}
