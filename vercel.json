@@ -2,6 +2,15 @@
   "cleanUrls": true,
   "redirects": [
     { "source": "/service-area", "destination": "/", "permanent": true },
-    { "source": "/mobile-auto-detailing-in-college-station", "destination": "/college-station", "permanent": true }
+    { "source": "/mobile-auto-detailing-in-college-station", "destination": "/college-station", "permanent": true },
+    { "source": "/mobile-auto-detailing-in-bryan", "destination": "/bryan", "permanent": true },
+    { "source": "/mobile-auto-detailing-in-navasota", "destination": "/navasota", "permanent": true },
+    { "source": "/mobile-auto-detailing-in-brenham", "destination": "/brenham", "permanent": true },
+    { "source": "/mobile-auto-detailing-in-montgomery", "destination": "/montgomery", "permanent": true },
+    { "source": "/mobile-auto-detailing-in-waller", "destination": "/waller", "permanent": true },
+    { "source": "/mobile-auto-detailing-in-magnolia", "destination": "/magnolia", "permanent": true },
+    { "source": "/detailing-services", "destination": "/services", "permanent": true },
+    { "source": "/pricing", "destination": "/services", "permanent": true },
+    { "source": "/contact", "destination": "/quote", "permanent": true }
   ]
 }
