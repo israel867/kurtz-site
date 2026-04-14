@@ -11,6 +11,7 @@
     { "source": "/mobile-auto-detailing-in-magnolia", "destination": "/magnolia", "permanent": true },
     { "source": "/detailing-services", "destination": "/services", "permanent": true },
     { "source": "/pricing", "destination": "/services", "permanent": true },
-    { "source": "/contact", "destination": "/quote", "permanent": true }
+    { "source": "/contact", "destination": "/quote", "permanent": true },
+    { "source": "/privacy-policy", "destination": "/privacy", "permanent": true }
   ]
 }
