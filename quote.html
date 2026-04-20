@@ -118,7 +118,7 @@
 <section class="page-hero">
   <div class="container">
     <h1>Get Your Free Detailing Quote</h1>
-    <p>Fill it out and we will get back to you within a few minutes. A deposit is required to hold your appointment.</p>
+    <p>Drop your name and number. We'll call you back within a few minutes with a quote tailored to your vehicle.</p>
   </div>
 </section>
 
@@ -131,155 +131,14 @@
     <form id="quote-form" action="https://submit-form.com/oOhEKnJrG" method="POST">
       <input type="hidden" name="_redirect" value="false">
 
-      <!-- Name fields -->
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
-        <div class="form-group">
-          <label for="first-name">First Name <span class="required">*</span></label>
-          <input type="text" id="first-name" name="first_name" class="form-input" required>
-        </div>
-        <div class="form-group">
-          <label for="last-name">Last Name <span class="required">*</span></label>
-          <input type="text" id="last-name" name="last_name" class="form-input" required>
-        </div>
+      <div class="form-group">
+        <label for="name">Name <span class="required">*</span></label>
+        <input type="text" id="name" name="name" class="form-input" required>
       </div>
 
       <div class="form-group">
         <label for="phone">Phone Number <span class="required">*</span></label>
         <input type="tel" id="phone" name="phone" class="form-input" required>
-      </div>
-
-      <div class="form-group">
-        <label for="vehicle">Vehicle Year Make &amp; Model <span class="required">*</span></label>
-        <input type="text" id="vehicle" name="vehicle" class="form-input" placeholder="e.g. 2024 Toyota Camry" required>
-      </div>
-
-      <!-- Vehicle Type -->
-      <div class="form-group">
-        <label>Vehicle Type</label>
-        <div class="form-radio-group">
-          <label class="form-radio">
-            <input type="radio" name="vehicle_type" value="Sedan/Coupe"> Sedan/Coupe
-          </label>
-          <label class="form-radio">
-            <input type="radio" name="vehicle_type" value="Midsize SUV/Crossover"> Midsize SUV/Crossover
-          </label>
-          <label class="form-radio">
-            <input type="radio" name="vehicle_type" value="Large SUV/Truck"> Large SUV/Truck
-          </label>
-          <label class="form-radio">
-            <input type="radio" name="vehicle_type" value="Van/Minivan"> Van/Minivan
-          </label>
-        </div>
-      </div>
-
-      <!-- Services -->
-      <div class="form-section-title">Inside &amp; Out</div>
-      <div class="form-group">
-        <div class="form-checkbox-group">
-          <label class="form-checkbox">
-            <input type="checkbox" name="services" value="Standard Detail"> Standard Detail
-          </label>
-          <label class="form-checkbox">
-            <input type="checkbox" name="services" value="Full Detail"> Full Detail
-          </label>
-          <label class="form-checkbox">
-            <input type="checkbox" name="services" value="Luxury Detail"> Luxury Detail
-          </label>
-          <label class="form-checkbox">
-            <input type="checkbox" name="services" value="The Million Dollar Package"> The Million Dollar Package
-          </label>
-        </div>
-      </div>
-
-      <div class="form-section-title">Interior</div>
-      <div class="form-group">
-        <div class="form-checkbox-group">
-          <label class="form-checkbox">
-            <input type="checkbox" name="services" value="Premium Interior Detail"> Premium Interior Detail
-          </label>
-          <label class="form-checkbox">
-            <input type="checkbox" name="services" value="Interior Deep Clean & Reset"> Interior Deep Clean &amp; Reset
-          </label>
-        </div>
-      </div>
-
-      <div class="form-section-title">Exterior</div>
-      <div class="form-group">
-        <div class="form-checkbox-group">
-          <label class="form-checkbox">
-            <input type="checkbox" name="services" value="Quick Exterior Wash"> Quick Exterior Wash
-          </label>
-          <label class="form-checkbox">
-            <input type="checkbox" name="services" value="Clay Wash & Seal"> Clay Wash &amp; Seal
-          </label>
-          <label class="form-checkbox">
-            <input type="checkbox" name="services" value="Acid Wash & Water Spot Removal"> Acid Wash &amp; Water Spot Removal
-          </label>
-        </div>
-      </div>
-
-      <div class="form-section-title">Paint Correction</div>
-      <div class="form-group">
-        <div class="form-checkbox-group">
-          <label class="form-checkbox">
-            <input type="checkbox" name="services" value="Gloss Enhancement"> Gloss Enhancement
-          </label>
-          <label class="form-checkbox">
-            <input type="checkbox" name="services" value="Signature Correction"> Signature Correction
-          </label>
-          <label class="form-checkbox">
-            <input type="checkbox" name="services" value="Showroom Restoration"> Showroom Restoration
-          </label>
-        </div>
-      </div>
-
-      <div class="form-section-title">Ceramic Coating</div>
-      <div class="form-group">
-        <div class="form-checkbox-group">
-          <label class="form-checkbox">
-            <input type="checkbox" name="services" value="3-Year Ceramic Coating"> 3-Year Ceramic Coating
-          </label>
-          <label class="form-checkbox">
-            <input type="checkbox" name="services" value="7-Year Ceramic Coating"> 7-Year Ceramic Coating
-          </label>
-          <label class="form-checkbox">
-            <input type="checkbox" name="services" value="Leather Ceramic Coating"> Leather Ceramic Coating
-          </label>
-          <label class="form-checkbox">
-            <input type="checkbox" name="services" value="Glass Ceramic Coating"> Glass Ceramic Coating
-          </label>
-        </div>
-      </div>
-
-      <div class="form-section-title">Add-Ons</div>
-      <div class="form-group">
-        <div class="form-checkbox-group">
-          <label class="form-checkbox">
-            <input type="checkbox" name="services" value="Carpet & Seat Extraction"> Carpet &amp; Seat Extraction
-          </label>
-          <label class="form-checkbox">
-            <input type="checkbox" name="services" value="Ozone Treatment"> Ozone Treatment
-          </label>
-          <label class="form-checkbox">
-            <input type="checkbox" name="services" value="Engine Bay Clean"> Engine Bay Clean
-          </label>
-          <label class="form-checkbox">
-            <input type="checkbox" name="services" value="Headlight Restoration"> Headlight Restoration
-          </label>
-          <label class="form-checkbox">
-            <input type="checkbox" name="services" value="Pet Hair Removal"> Pet Hair Removal
-          </label>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label for="city">Your City/Location <span class="required">*</span></label>
-        <input type="text" id="city" name="city" class="form-input" required>
-      </div>
-
-      <div class="form-group">
-        <label for="notes">Additional Notes</label>
-        <textarea id="notes" name="notes" class="form-textarea" placeholder="Anything else we should know about your vehicle or what you're looking for..."></textarea>
       </div>
 
       <div class="consent-section" style="margin: 20px 0; padding: 16px; border: 1px solid #ddd; border-radius: 8px;">
