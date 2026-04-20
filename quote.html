@@ -282,10 +282,29 @@
         <textarea id="notes" name="notes" class="form-textarea" placeholder="Anything else we should know about your vehicle or what you're looking for..."></textarea>
       </div>
 
+      <div class="consent-section" style="margin: 20px 0; padding: 16px; border: 1px solid #ddd; border-radius: 8px;">
+
+        <label style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 14px; cursor: pointer;">
+          <input type="checkbox" name="sms_marketing_consent" value="yes" style="margin-top: 4px; flex-shrink: 0;">
+          <span style="font-size: 14px; line-height: 1.4;">
+            I agree to receive marketing and promotional text messages from Kurtz Auto Detailing, including special offers, seasonal promotions, and reactivation campaigns. Message and data rates may apply. Message frequency varies. Reply STOP to opt out, HELP for help.
+          </span>
+        </label>
+
+        <label style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 14px; cursor: pointer;">
+          <input type="checkbox" name="sms_transactional_consent" value="yes" style="margin-top: 4px; flex-shrink: 0;">
+          <span style="font-size: 14px; line-height: 1.4;">
+            I agree to receive informational and transactional text messages from Kurtz Auto Detailing, including quote responses, appointment confirmations, service reminders, and job completion updates. Message and data rates may apply. Message frequency varies. Reply STOP to opt out, HELP for help.
+          </span>
+        </label>
+
+        <p style="font-size: 12px; color: #666; margin-top: 10px; line-height: 1.4;">
+          Your phone number will not be shared with third parties for marketing purposes. View our <a href="/privacy">Privacy Policy</a> and <a href="/sms-terms">SMS Terms</a>.
+        </p>
+
+      </div>
+
       <button type="submit" class="btn btn--primary" style="width:100%;padding:1rem 2rem;font-size:1.1rem;">Request My Quote</button>
-      <p style="margin-top:1rem; font-size:0.8rem; line-height:1.5; color:var(--color-text-muted); text-align:center;">
-        When you submit this form or call Kurtz Auto Detailing, you consent to receive return calls and text messages from us regarding your quote, appointment, and service updates. Msg &amp; data rates may apply. Reply STOP to opt out of SMS. See our <a href="/privacy" style="color:inherit; text-decoration:underline;">Privacy Policy</a> and <a href="/sms-terms" style="color:inherit; text-decoration:underline;">SMS Terms</a>.
-      </p>
     </form>
 
     <div style="text-align:center;margin-top:2.5rem;">
