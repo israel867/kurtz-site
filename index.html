@@ -6,7 +6,9 @@
   <title>Mobile Auto Detailing Bryan-College Station TX | Kurtz Auto Detailing</title>
   <meta name="description" content="Kurtz Auto Detailing — premium mobile detailing in Bryan-College Station &amp; Brazos Valley TX. Ceramic coatings, paint correction, interior details. 300+ vehicles detailed, 100+ five-star reviews. Book today — call (979) 574-2005.">
   <meta name="robots" content="index, follow">
-  <meta name="keywords" content="mobile auto detailing Bryan TX, auto detailing College Station TX, ceramic coating Brazos Valley, paint correction BCS, interior detailing Navasota TX, mobile detailer near Texas A&M, car detailing Bryan-College Station">  <link rel="icon" href="images/favicon-kurtz-auto-detailing.png" type="image/png">
+  <meta name="keywords" content="mobile auto detailing Bryan TX, auto detailing College Station TX, ceramic coating Brazos Valley, paint correction BCS, interior detailing Navasota TX, mobile detailer near Texas A&M, car detailing Bryan-College Station">  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
 <link rel="canonical" href="https://www.kurtzautodetailing.com/">
 
 <!-- Open Graph -->
@@ -22,13 +24,628 @@
 <meta name="twitter:description" content="Kurtz Auto Detailing — premium mobile detailing in Bryan-College Station & Brazos Valley TX. Ceramic coatings, paint correction, interior details. 300+ vehicles detailed, 100+ five-star reviews. Call (979) 574-2005.">
 <meta name="twitter:image" content="https://www.kurtzautodetailing.com/images/mobile-detailing-c8-corvette-wash-bryan-college-station-tx.webp">
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Critical CSS (inlined for fast first paint; full stylesheet loads async below) -->
+  <style>
+/* ---------- CSS Variables ---------- */
+:root {
+  --color-bg: #0a0a0a;
+  --color-bg-alt: #0f0a14;
+  --color-bg-card: #13101a;
+  --color-bg-card-hover: #1c1726;
+  --color-surface: #161222;
+  --color-border: #2a2040;
+  --color-text: #ffffff;
+  --color-text-secondary: #b0a8c0;
+  --color-text-muted: #6e6580;
+  --color-accent: #00e5ff;
+  --color-accent-hover: #40efff;
+  --color-accent-dark: #00b8cc;
+  --color-purple: #7b2fbe;
+  --color-purple-light: #9b4ddb;
+  --color-purple-dark: #5a1d8e;
+  --color-red: #c0392b;
+  --color-green: #27ae60;
+  --color-star: #00e5ff;
+  --color-glow-cyan: rgba(0, 229, 255, 0.3);
+  --color-glow-purple: rgba(123, 47, 190, 0.3);
+  --font-display: 'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;
+  --font-body: 'DM Sans', 'DM Sans Fallback', sans-serif;
+  --max-width: 1200px;
+  --nav-height: 72px;
+  --mobile-cta-height: 60px;
+  --radius: 8px;
+  --radius-lg: 12px;
+  --shadow: 0 4px 24px rgba(0,0,0,0.4);
+  --shadow-glow: 0 0 20px var(--color-glow-cyan);
+  --shadow-glow-purple: 0 0 20px var(--color-glow-purple);
+  --transition: 0.25s ease;
+}
 
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="styles.css">
+/* ---------- Fonts: self-hosted, preloaded, metric-matched fallback (eliminates CLS on swap) ---------- */
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/barlow-condensed-400.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('fonts/barlow-condensed-600.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('fonts/barlow-condensed-700.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/dm-sans-400.woff2') format('woff2');
+}
+
+/* Fallback faces: metrics extracted from the actual webfonts (fontTools) and scaled
+   against Arial so the fallback occupies the exact same box, eliminating reflow on swap. */
+@font-face {
+  font-family: 'Barlow Condensed Fallback';
+  src: local('Arial');
+  font-weight: 400;
+  ascent-override: 111.19%;
+  descent-override: 22.24%;
+  line-gap-override: 0%;
+  size-adjust: 89.94%;
+}
+@font-face {
+  font-family: 'Barlow Condensed Fallback';
+  src: local('Arial');
+  font-weight: 600;
+  ascent-override: 105.85%;
+  descent-override: 21.17%;
+  line-gap-override: 0%;
+  size-adjust: 94.47%;
+}
+@font-face {
+  font-family: 'Barlow Condensed Fallback';
+  src: local('Arial');
+  font-weight: 700;
+  ascent-override: 103.13%;
+  descent-override: 20.63%;
+  line-gap-override: 0%;
+  size-adjust: 96.96%;
+}
+@font-face {
+  font-family: 'DM Sans Fallback';
+  src: local('Arial');
+  font-weight: 400;
+  ascent-override: 81.09%;
+  descent-override: 25.34%;
+  line-gap-override: 0%;
+  size-adjust: 122.34%;
+}
+
+/* ---------- Reset ---------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+a:hover { color: var(--color-accent-hover); }
+
+ul, ol { list-style: none; }
+
+button { cursor: pointer; font-family: var(--font-body); border: none; background: none; }
+
+input, textarea, select { font-family: var(--font-body); }
+
+/* ---------- Typography ---------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.15;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+h1 { font-size: clamp(2.2rem, 6vw, 4rem); }
+
+h2 { font-size: clamp(1.6rem, 4vw, 2.6rem); margin-bottom: 1rem; }
+
+h3 { font-size: clamp(1.2rem, 3vw, 1.6rem); }
+
+.text-accent { color: var(--color-accent); }
+
+.text-white { color: var(--color-text); }
+
+/* ---------- Layout Utilities ---------- */
+.container { width: 100%; max-width: var(--max-width); margin: 0 auto; padding: 0 1.25rem; }
+
+.section { padding: 5rem 0; }
+
+.section--alt { background: var(--color-bg-alt); }
+
+.text-center { text-align: center; }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: var(--radius);
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+
+.btn--primary {
+  background: var(--color-accent);
+  color: #000;
+  text-shadow: none;
+}
+
+.btn--primary:hover {
+  background: var(--color-accent-hover);
+  color: #000;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-glow);
+}
+
+.btn--secondary {
+  background: transparent;
+  color: var(--color-text);
+  border: 2px solid var(--color-text);
+}
+
+.btn--secondary:hover {
+  background: var(--color-text);
+  color: var(--color-bg);
+  transform: translateY(-1px);
+}
+
+.btn--primary-alt {
+  background: var(--color-purple);
+  color: #fff;
+  text-shadow: none;
+}
+
+.btn--primary-alt:hover {
+  background: var(--color-purple-light);
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-glow-purple);
+}
+
+.btn--outline-accent {
+  background: transparent;
+  color: var(--color-accent);
+  border: 2px solid var(--color-accent);
+}
+
+.btn--outline-accent:hover {
+  background: var(--color-accent);
+  color: #000;
+}
+
+.btn--small { padding: 0.625rem 1.25rem; font-size: 0.9rem; }
+
+.btn-group { display: flex; flex-wrap: wrap; gap: 1rem; }
+
+.btn-group--center { justify-content: center; }
+
+/* ---------- Navigation ---------- */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border);
+  height: var(--nav-height);
+}
+
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.navbar__logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.navbar__logo:hover { color: var(--color-text); }
+
+.navbar__logo-main {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.navbar__logo-sub {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-purple-light);
+}
+
+.navbar__links {
+  display: none;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.navbar__links a {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-secondary);
+  transition: color var(--transition);
+}
+
+.navbar__links a:hover { color: var(--color-text); }
+
+.navbar__cta { display: none; }
+
+/* Dropdown */
+.navbar__dropdown {
+  position: relative;
+}
+
+.navbar__dropdown-toggle {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.navbar__dropdown-toggle:hover { color: var(--color-text); }
+
+.navbar__dropdown-toggle svg { width: 12px; height: 12px; transition: transform var(--transition); }
+
+.navbar__dropdown.active .navbar__dropdown-toggle svg { transform: rotate(180deg); }
+
+.navbar__dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 0.75rem;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 0.5rem 0;
+  min-width: 200px;
+  box-shadow: var(--shadow);
+}
+
+.navbar__dropdown.active .navbar__dropdown-menu { display: block; }
+
+.navbar__dropdown-menu a {
+  display: block;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+}
+
+.navbar__dropdown-menu a:hover {
+  background: var(--color-bg-card-hover);
+  color: var(--color-text);
+}
+
+/* Hamburger */
+.navbar__hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 4px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.navbar__hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--color-text);
+  transition: all var(--transition);
+}
+
+.navbar__hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+
+.navbar__hamburger.active span:nth-child(2) { opacity: 0; }
+
+.navbar__hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+/* Mobile Nav */
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: var(--nav-height);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--color-bg);
+  z-index: 999;
+  padding: 2rem 1.25rem;
+  overflow-y: auto;
+}
+
+.mobile-nav.active { display: block; }
+
+.mobile-nav a, .mobile-nav button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 1rem 0;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.mobile-nav .mobile-nav__sub {
+  padding-left: 1rem;
+}
+
+.mobile-nav .mobile-nav__sub a {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-text-secondary);
+}
+
+.mobile-nav__cta {
+  margin-top: 2rem;
+}
+
+.mobile-nav__cta .btn { width: 100%; margin-bottom: 1rem; }
+
+@media (min-width: 1024px) {
+  .navbar__links { display: flex; }
+  .navbar__cta { display: block; }
+  .navbar__hamburger { display: none; }
+}
+
+/* Body offset for fixed nav */
+body { padding-top: var(--nav-height); }
+
+body { padding-bottom: var(--mobile-cta-height); }
+
+@media (min-width: 1024px) {
+  .mobile-cta { display: none; }
+  body { padding-bottom: 0; }
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero__bg video,
+.hero__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero__bg-fallback {
+  position: absolute;
+  inset: 0;
+}
+
+.hero__video {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+
+.hero__video--active {
+  opacity: 1;
+}
+
+.hero__bg--video-active .hero__bg-fallback {
+  display: none;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(10,10,10,0.7) 0%, rgba(10,10,10,0.85) 100%);
+  z-index: 1;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 2rem 1.25rem;
+}
+
+.hero__subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: var(--color-text-secondary);
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero h1 { margin-bottom: 1rem; }
+
+.hero .btn-group { margin-top: 0.5rem; }
+
+/* ---------- Google Reviews Badge (hero) ---------- */
+.hero__reviews-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 50px;
+  padding: 0.5rem 1.25rem;
+  margin-top: 2rem;
+}
+
+.hero__reviews-badge-stars {
+  display: flex;
+  gap: 2px;
+}
+
+.hero__reviews-badge-stars svg {
+  width: 18px;
+  height: 18px;
+  fill: var(--color-star);
+}
+
+.hero__reviews-badge-text {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--color-text);
+}
+
+.hero__reviews-badge-text span {
+  color: var(--color-text-secondary);
+  font-weight: 400;
+}
+
+/* ---------- Section Labels (accent eyebrow) ---------- */
+.section-label {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
+}
+
+/* ============================================
+   RETRO / SYNTHWAVE ENHANCEMENTS
+   ============================================ */
+
+/* Navbar logo image */
+.navbar__logo-img {
+  height: 60px;
+  width: auto;
+  display: block;
+}
+
+/* Subtle purple tint on alt sections */
+.section--alt {
+  background: linear-gradient(180deg, var(--color-bg-alt) 0%, rgba(90, 29, 142, 0.06) 100%);
+}
+
+/* Neon glow text for hero heading accent */
+.hero h1 .text-accent {
+  text-shadow: 0 0 20px var(--color-glow-cyan), 0 0 40px rgba(0, 229, 255, 0.15);
+}
+
+/* Navbar accent line */
+.navbar {
+  border-bottom: 1px solid var(--color-border);
+  border-image: linear-gradient(90deg, transparent, var(--color-purple), var(--color-accent), var(--color-purple), transparent) 1;
+}
+
+/* Hero reviews badge — purple tint */
+.hero__reviews-badge {
+  background: rgba(123, 47, 190, 0.2);
+  border-color: rgba(123, 47, 190, 0.3);
+}
+
+/* Section label — now cyan */
+.section-label {
+  color: var(--color-accent);
+  text-shadow: 0 0 12px var(--color-glow-cyan);
+}
+
+/* Outline accent button — now cyan */
+.btn--outline-accent:hover {
+  box-shadow: var(--shadow-glow);
+}
+
+  </style>
+
+  <!-- Hero LCP image: preload at highest priority -->
+  <link rel="preload" as="image" href="images/hero-poster-mobile.webp" fetchpriority="high">
+
+  <!-- Self-hosted above-the-fold fonts: preloaded, metric-matched fallback defined above (zero CLS on swap) -->
+  <link rel="preload" as="font" type="font/woff2" href="fonts/barlow-condensed-700.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="fonts/barlow-condensed-600.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="fonts/barlow-condensed-400.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="fonts/dm-sans-400.woff2" crossorigin>
+
+  <!-- Full stylesheet: preload + swap to non-blocking (critical subset already inlined above) -->
+  <link rel="preload" as="style" href="styles.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="styles.css"></noscript>
 
 
 <script type="application/ld+json">
@@ -142,7 +759,7 @@
 <nav class="navbar">
   <div class="navbar__inner">
     <a href="/" class="navbar__logo">
-      <img src="images/kurtz-auto-detailing-logo.png" alt="Kurtz Auto Detailing" class="navbar__logo-img">
+      <img src="images/kurtz-auto-detailing-logo.webp" alt="Kurtz Auto Detailing" class="navbar__logo-img">
     </a>
 
     <div class="navbar__links">
@@ -201,23 +818,23 @@
   <a href="/about">About</a>
   <div class="mobile-nav__cta">
     <a href="/quote" class="btn btn--primary">Get My Free Quote</a>
-    <a href="tel:+19795742005" class="btn btn--secondary">Call (979) 574-2005</a>
+    <a href="tel:+19795742005" class="btn btn--primary-alt">Call (979) 574-2005</a>
   </div>
 </div>
 
 <!-- ═══ HERO ═══ -->
 <section class="hero">
   <div class="hero__bg">
-    <video class="hero__video hero__video--active" autoplay muted loop playsinline poster="images/mobile-detailing-c8-corvette-wash-bryan-college-station-tx.webp" aria-hidden="true">
-      <source src="images/hero-orbital-polisher-paint-correction.mp4" type="video/mp4">
+    <img src="images/hero-poster-mobile.webp" alt="Mobile auto detailing in Bryan-College Station TX – Kurtz Auto Detailing" width="750" height="1000" class="hero__bg-fallback" fetchpriority="high">
+    <video class="hero__video hero__video--active" muted loop playsinline preload="none" poster="images/hero-poster-mobile.webp" aria-hidden="true">
+      <source data-src="images/hero-orbital-polisher-paint-correction.mp4" type="video/mp4">
     </video>
-    <video class="hero__video" muted loop playsinline aria-hidden="true">
-      <source src="images/hero-lincoln-aviator-driveway-detail.mp4" type="video/mp4">
+    <video class="hero__video" muted loop playsinline preload="none" aria-hidden="true">
+      <source data-src="images/hero-lincoln-aviator-driveway-detail.mp4" type="video/mp4">
     </video>
-    <video class="hero__video" muted loop playsinline aria-hidden="true">
-      <source src="images/hero-interior-vacuum-deep-clean-suv.mp4" type="video/mp4">
+    <video class="hero__video" muted loop playsinline preload="none" aria-hidden="true">
+      <source data-src="images/hero-interior-vacuum-deep-clean-suv.mp4" type="video/mp4">
     </video>
-    <img src="images/mobile-detailing-c8-corvette-wash-bryan-college-station-tx.webp" alt="Mobile auto detailing in Bryan-College Station TX – Kurtz Auto Detailing" width="1920" height="1080" class="hero__bg-fallback">
   </div>
   <div class="hero__overlay"></div>
   <div class="hero__content">
@@ -225,7 +842,7 @@
     <p class="hero__subtitle">We come to you. Professional-grade detailing at your driveway, workplace, or wherever your car is parked.</p>
     <div class="btn-group btn-group--center">
       <a href="tel:+19795742005" class="btn btn--primary">Call (979) 574-2005</a>
-      <a href="/quote" class="btn btn--secondary">Get a Free Quote</a>
+      <a href="/quote" class="btn btn--primary-alt">Get a Free Quote</a>
     </div>
     <!-- Google Reviews Badge -->
     <div class="hero__reviews-badge">
@@ -496,7 +1113,7 @@
     <h2>Ready to Book <span class="text-accent">Your Detail?</span></h2>
     <div class="btn-group btn-group--center">
       <a href="/quote" class="btn btn--primary">Get My Free Quote</a>
-      <a href="tel:+19795742005" class="btn btn--secondary">Call Now</a>
+      <a href="tel:+19795742005" class="btn btn--primary-alt">Call Now</a>
     </div>
     <p style="margin-top:1rem;font-size:0.85rem;"><a href="https://app.urable.com/virtual-shop/L797NMTCaRocOcpsWufx" target="_blank" rel="noopener noreferrer" style="color:var(--color-text-muted);text-decoration:underline;">Already know what you want? Book online</a></p>
   </div>
@@ -508,7 +1125,7 @@
     <div class="footer__grid">
       <div>
         <div class="footer__logo">
-          <img src="images/kurtz-auto-detailing-logo.png" alt="Kurtz Auto Detailing" class="footer__logo-img">
+          <img src="images/kurtz-auto-detailing-logo.webp" alt="Kurtz Auto Detailing" class="footer__logo-img">
         </div>
         <p class="footer__tagline">Professional Mobile Detailing Across Brazos Valley and Beyond.</p>
         <div class="footer__social">
@@ -585,7 +1202,24 @@
 <script src="main.js"></script>
 <script>
 (function() {
+  const isDesktop = window.matchMedia('(min-width: 769px)').matches;
+  const saveData = navigator.connection && navigator.connection.saveData;
+  if (!isDesktop || saveData) return;
+
+  const heroBg = document.querySelector('.hero__bg');
   const videos = document.querySelectorAll('.hero__video');
+  if (!heroBg || videos.length === 0) return;
+
+  videos.forEach(function(video) {
+    const source = video.querySelector('source[data-src]');
+    if (source) {
+      source.src = source.getAttribute('data-src');
+    }
+    video.load();
+  });
+  heroBg.classList.add('hero__bg--video-active');
+  videos[0].play();
+
   if (videos.length < 2) return;
   let current = 0;
   setInterval(function() {

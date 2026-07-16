@@ -25,8 +25,8 @@
   --color-star: #00e5ff;
   --color-glow-cyan: rgba(0, 229, 255, 0.3);
   --color-glow-purple: rgba(123, 47, 190, 0.3);
-  --font-display: 'Barlow Condensed', sans-serif;
-  --font-body: 'DM Sans', sans-serif;
+  --font-display: 'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;
+  --font-body: 'DM Sans', 'DM Sans Fallback', sans-serif;
   --max-width: 1200px;
   --nav-height: 72px;
   --mobile-cta-height: 60px;
@@ -131,6 +131,17 @@ p { margin-bottom: 1rem; color: var(--color-text-secondary); }
   background: var(--color-text);
   color: var(--color-bg);
   transform: translateY(-1px);
+}
+.btn--primary-alt {
+  background: var(--color-purple);
+  color: #fff;
+  text-shadow: none;
+}
+.btn--primary-alt:hover {
+  background: var(--color-purple-light);
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-glow-purple);
 }
 .btn--outline-accent {
   background: transparent;
@@ -351,12 +362,15 @@ body { padding-top: var(--nav-height); }
   color: var(--color-text);
 }
 .mobile-cta a:first-child {
+  background: var(--color-purple);
+  color: #fff;
+}
+.mobile-cta a:first-child:hover { background: var(--color-purple-light); }
+.mobile-cta a:last-child {
   background: var(--color-accent);
   color: #000;
 }
-.mobile-cta a:first-child:hover { background: var(--color-accent-hover); }
-.mobile-cta a:last-child { background: var(--color-surface); }
-.mobile-cta a:last-child:hover { background: var(--color-bg-card-hover); }
+.mobile-cta a:last-child:hover { background: var(--color-accent-hover); }
 body { padding-bottom: var(--mobile-cta-height); }
 
 @media (min-width: 1024px) {
@@ -385,6 +399,10 @@ body { padding-bottom: var(--mobile-cta-height); }
   height: 100%;
   object-fit: cover;
 }
+.hero__bg-fallback {
+  position: absolute;
+  inset: 0;
+}
 .hero__video {
   position: absolute;
   inset: 0;
@@ -394,7 +412,7 @@ body { padding-bottom: var(--mobile-cta-height); }
 .hero__video--active {
   opacity: 1;
 }
-.hero__bg video + .hero__bg-fallback {
+.hero__bg--video-active .hero__bg-fallback {
   display: none;
 }
 .hero__overlay {
@@ -1364,7 +1382,7 @@ body { padding-bottom: var(--mobile-cta-height); }
 
 /* Mobile CTA gradient */
 .mobile-cta a:first-child {
-  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-dark) 100%);
+  background: linear-gradient(135deg, var(--color-purple) 0%, var(--color-purple-dark) 100%);
 }
 
 /* Section label — now cyan */
